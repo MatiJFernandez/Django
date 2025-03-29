@@ -6,8 +6,7 @@ venv
 __pycache__/
 *.pyc
 *.pyo
-/itec2025/db.sqlite3  # Si usas SQLite, para no subir la base de datos local
-itec2025/db.sqlite3
+db.sqlite3  # Si usas SQLite, para no subir la base de datos local
 venv/
 
 echo "*.pyc" >> .gitignore
