@@ -1,0 +1,2 @@
+init y asgi, wsgi: archivos de deploy. asgi admite sincronismo. Son casi identicos
+
