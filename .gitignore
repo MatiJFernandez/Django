@@ -7,3 +7,4 @@ __pycache__/
 *.pyo
 db.sqlite3  # Si usas SQLite, para no subir la base de datos local
 
+venv/
