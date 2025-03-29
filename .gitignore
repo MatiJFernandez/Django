@@ -1,10 +1,14 @@
 # Ignorar entorno virtual
-venv/
+env
+venv
 
 # Ignorar archivos de caché y configuraciones de Django
 __pycache__/
 *.pyc
 *.pyo
-db.sqlite3  # Si usas SQLite, para no subir la base de datos local
-
+/itec2025/db.sqlite3  # Si usas SQLite, para no subir la base de datos local
+itec2025/db.sqlite3
 venv/
+
+echo "*.pyc" >> .gitignore
+echo "db.sqlite3" >> .gitignore
