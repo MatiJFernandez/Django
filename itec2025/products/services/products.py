@@ -37,3 +37,4 @@ class ProductService:
     @staticmethod
     def search_by_price_range(min_price: float, max_price: float) -> list[Product]:
         return ProductRepository.search_by_price_range(min_price, max_price)
+

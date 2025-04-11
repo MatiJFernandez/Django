@@ -1,0 +1,48 @@
+.
+├── db.sqlite3
+├── estructura_proyecto.txt
+├── home
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── models.py
+│   ├── templates
+│   │   └── base.html
+│   ├── tests.py
+│   └── views.py
+├── itec2025
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── products
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── models.py
+│   ├── repositories
+│   │   ├── customers.py
+│   │   ├── __init__.py
+│   │   ├── order_details.py
+│   │   ├── orders.py
+│   │   └── products.py
+│   ├── services
+│   │   ├── customer.py
+│   │   ├── __init__.py
+│   │   ├── order_details.py
+│   │   ├── orders.py
+│   │   └── products.py
+│   ├── templates
+│   │   ├── orders
+│   │   │   └── list.html
+│   │   └── products
+│   │       ├── detail.html
+│   │       └── list.html
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+└── requirements.txt
+
+9 directories, 36 files
