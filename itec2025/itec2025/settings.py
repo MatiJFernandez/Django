@@ -25,12 +25,11 @@ SECRET_KEY = 'django-insecure-(i4dztq6l9sp4vr-0_q505*7*c_rw%47j-7it=khd*5a)l4v1d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#Hosts allowed to connect to the server
+# SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1']
 
-
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +43,8 @@ INSTALLED_APPS = [
     'customers',
 ]
 
+# Middleware definition
+# https://docs.djangoproject.com/en/5.1/topics/http/middleware/
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -54,8 +55,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# URL configuration
+# https://docs.djangoproject.com/en/5.1/topics/http/urls/
 ROOT_URLCONF = 'itec2025.urls'
 
+# Template configuration
+# https://docs.djangoproject.com/en/5.1/topics/templates/
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -72,6 +77,9 @@ TEMPLATES = [
     },
 ]
 
+# Archivo que inicia todo el .wsgi (anteriormente era el app.py en Flask)
+# ASGI application
+# https://docs.djangoproject.com/en/5.1/howto/deployment/asgi/
 WSGI_APPLICATION = 'itec2025.wsgi.application'
 
 
