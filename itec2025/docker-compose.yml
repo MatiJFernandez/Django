@@ -1,0 +1,12 @@
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: python3 manage.py runserver 0.0.0.0:8000
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1  # Evita archivos .pyc
+      - PYTHONUNBUFFERED=1         # Muestra logs en tiempo real
