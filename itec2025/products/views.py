@@ -16,3 +16,6 @@ def product_list(request):
 
 def order_list(request):
     return render(request, 'orders/list.html')
+
+def escanear_codigo(request):
+    return render(request, 'products/escanear_codigo.html')

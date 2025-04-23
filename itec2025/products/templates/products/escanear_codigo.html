@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Escanear Código</title>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <style>
+        #reader {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escanear Código</h1>
+    <div id="reader"></div>
+    <div id="result">Esperando código...</div>
+
+    <script>
+        function onScanSuccess(decodedText, decodedResult) {
+            document.getElementById("result").innerText = "Código detectado: " + decodedText;
+
+            // Detener el escáner después de una detección exitosa
+            html5QrcodeScanner.clear();
+
+            // Opcional: enviar el código al backend usando fetch
+            /*
+            fetch('/ruta-a-tu-api/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ codigo: decodedText })
+            });
+            */
+        }
+
+        const html5QrcodeScanner = new Html5QrcodeScanner(
+            "reader", 
+            { fps: 10, qrbox: 250 },
+            /* verbose= */ false
+        );
+        html5QrcodeScanner.render(onScanSuccess);
+    </script>
+</body>
+</html>

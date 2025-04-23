@@ -1,6 +1,6 @@
 from django.urls import path
 
-from products.views import product_list, order_list
+from products.views import product_list, order_list, escanear_codigo
 
 urlpatterns = [
     path(
@@ -13,4 +13,5 @@ urlpatterns = [
         view=order_list, 
         name='order_list'
     ),
+    path(route='escaner/', view=escanear_codigo, name='escaner'),
 ]   
