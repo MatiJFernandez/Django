@@ -1,31 +1,27 @@
-<!-- filepath: /home/matias/Documentos/3ro-DSW/ingenieriaSoftware/django_primera_parte/itec2025/products/templates/products/list.html -->
 {% extends 'base.html' %}
 
-{% block title %}Product List{% endblock %}
+{% block title %} Products List {% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-  <!-- Link to Home -->
-  <a href="{% url 'home' %}" class="btn btn-primary mb-3">Back to Home</a>
-
-  <h1 class="text-center mb-4">Product List</h1>
-  <table class="table table-striped table-bordered">
-    <thead class="thead-dark">
-      <tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Stock</th>
-      </tr>
-    </thead>
-    <tbody>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
       {% for product in products %}
-      <tr>
-        <td>{{ product.name }}</td>
-        <td>${{ product.price }}</td>
-        <td>{{ product.stock }}</td>
-      </tr>
+        <tr>
+          <td scope="row">{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.stock }}</td>
+          <td><a href="{% url 'product_detail' product.id %}" class="fa fa-eye" aria-hidden="true"> Ver </a></td>
+        </tr>
       {% endfor %}
     </tbody>
   </table>
-</div>
+  <h3>El total del valor de los productos es ${{total_price}}</h3>
 {% endblock %}
