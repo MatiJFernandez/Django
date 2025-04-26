@@ -4,7 +4,8 @@ from products.views import (
     order_list, 
     product_detail,
     product_list, 
-    escanear_codigo
+    escanear_codigo,
+    product_create,
 )
 
 urlpatterns = [
@@ -24,4 +25,5 @@ urlpatterns = [
         name='order_list'
     ),
     path(route='escaner/', view=escanear_codigo, name='escaner'),
+    path(route='create/', view=product_create, name='product_create'),
 ]
